@@ -6,13 +6,13 @@ const App = () => {
 
   useEffect(() => {
     // Use the Render backend URL here:
-    fetch('http://localhost:3000/api/tasks')
+    fetch('https://server-ktuh.onrender.com/api/tasks')
       .then((res) => res.json())
       .then((data) => setTasks(data));
   }, []);
 
   const addTask = () => {
-    fetch('http://localhost:3000/api/tasks', {
+    fetch('https://server-ktuh.onrender.com/api/tasks', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
